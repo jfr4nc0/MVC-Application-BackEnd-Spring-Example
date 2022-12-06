@@ -6,20 +6,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-public class User {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Jugador {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private int id;
 	private String nombre;
 	private String apellido;
 	private int edad;
 	private String equipo;
 	private String[] posicion = {"Arquero","Defensor","Volante","Delantero"};
 	
-	public User(long id, String nombre, String apellido, int edad, String equipo, String[] posicion) {
+	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String[] posicion) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -28,10 +36,10 @@ public class User {
 		this.equipo = equipo;
 		this.posicion = posicion;
 	}
-	public long getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -66,7 +74,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", equipo="
+		return "Jugador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", equipo="
 				+ equipo + ", posicion=" + Arrays.toString(posicion) + "]";
 	}
 	
