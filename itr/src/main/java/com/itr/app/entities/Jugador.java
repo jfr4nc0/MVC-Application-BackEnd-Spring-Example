@@ -25,9 +25,9 @@ public class Jugador {
 	private String apellido;
 	private int edad;
 	private String equipo;
-	private String[] posicion = {"Arquero","Defensor","Volante","Delantero"};
+	private String posicion;
 	
-	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String[] posicion) {
+	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String posicion) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -66,16 +66,15 @@ public class Jugador {
 	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
-	public String[] getPosicion() {
+	public String getPosicion() {
 		return posicion;
 	}
-	public void setPosicion(String[] posicion) {
+	public void setPosicion(String posicion) {
 		this.posicion = posicion;
 	}
 	@Override
 	public String toString() {
 		return "Jugador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", equipo="
-				+ equipo + ", posicion=" + Arrays.toString(posicion) + "]";
+				+ equipo + ", posicion=" + posicion + "]";
 	}
-	
 }
