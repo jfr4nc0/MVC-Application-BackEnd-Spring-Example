@@ -25,7 +25,6 @@ public class Jugador {
 	private String equipo;
 	private String posicion;
 	private int camiseta;
-	private String estado;
 	
 	/**
 	 * @param id
@@ -35,13 +34,11 @@ public class Jugador {
 	 * @param equipo
 	 * @param posicion
 	 * @param camiseta
-	 * @param estado
 	 */
 	
 	public Jugador() {}
 	
-	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String posicion, int camiseta,
-			String estado) {
+	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String posicion, int camiseta) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -50,7 +47,6 @@ public class Jugador {
 		this.equipo = equipo;
 		this.posicion = posicion;
 		this.camiseta = camiseta;
-		this.estado = estado;
 	}
 	public int getId() {
 		return id;
@@ -94,15 +90,9 @@ public class Jugador {
 	public void setCamiseta(int camiseta) {
 		this.camiseta = camiseta;
 	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
 	@Override
 	public String toString() {
 		return "Jugador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", equipo="
-				+ equipo + ", posicion=" + posicion + ", camiseta=" + camiseta + ", estado=" + estado + "]";
+				+ equipo + ", posicion=" + posicion + ", camiseta=" + camiseta + "]";
 	}
 }

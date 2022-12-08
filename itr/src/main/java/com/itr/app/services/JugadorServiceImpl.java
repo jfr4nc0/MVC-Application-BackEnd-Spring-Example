@@ -56,10 +56,6 @@ public class JugadorServiceImpl implements JugadorService{
             jugadorDB.setCamiseta(jugador.getCamiseta());
         }
         
-        if (Objects.nonNull(jugador.getEstado())) {
-            jugadorDB.setEstado(jugador.getEstado());
-        }
-        
         return jugadorRepository.save(jugadorDB);
 	}
 	
