@@ -1,7 +1,5 @@
 package com.itr.app.entities;
 
-import java.util.Arrays;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,8 +24,24 @@ public class Jugador {
 	private int edad;
 	private String equipo;
 	private String posicion;
+	private int camiseta;
+	private String estado;
 	
-	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String posicion) {
+	/**
+	 * @param id
+	 * @param nombre
+	 * @param apellido
+	 * @param edad
+	 * @param equipo
+	 * @param posicion
+	 * @param camiseta
+	 * @param estado
+	 */
+	
+	public Jugador() {}
+	
+	public Jugador(int id, String nombre, String apellido, int edad, String equipo, String posicion, int camiseta,
+			String estado) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -35,6 +49,8 @@ public class Jugador {
 		this.edad = edad;
 		this.equipo = equipo;
 		this.posicion = posicion;
+		this.camiseta = camiseta;
+		this.estado = estado;
 	}
 	public int getId() {
 		return id;
@@ -72,9 +88,21 @@ public class Jugador {
 	public void setPosicion(String posicion) {
 		this.posicion = posicion;
 	}
+	public int getCamiseta() {
+		return camiseta;
+	}
+	public void setCamiseta(int camiseta) {
+		this.camiseta = camiseta;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 	@Override
 	public String toString() {
 		return "Jugador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", equipo="
-				+ equipo + ", posicion=" + posicion + "]";
+				+ equipo + ", posicion=" + posicion + ", camiseta=" + camiseta + ", estado=" + estado + "]";
 	}
 }

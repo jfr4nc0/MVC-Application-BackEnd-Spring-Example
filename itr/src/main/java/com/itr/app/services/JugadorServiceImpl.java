@@ -17,13 +17,13 @@ public class JugadorServiceImpl implements JugadorService{
 	
 	// Guardar operacion
 	@Override
-	public Jugador saveJugador(Jugador jugador) {
+	public Jugador addJugador(Jugador jugador) {
 		return jugadorRepository.save(jugador);
 	}
 	
 	// Leer operacion
 	@Override
-	public List<Jugador> fetchJugadorList(){
+	public List<Jugador> getJugadorList(){
 		return (List<Jugador>) jugadorRepository.findAll();
 	}
 	
@@ -50,6 +50,14 @@ public class JugadorServiceImpl implements JugadorService{
         
         if (Objects.nonNull(jugador.getPosicion())) {
             jugadorDB.setPosicion(jugador.getPosicion());
+        }
+        
+        if (Objects.nonNull(jugador.getCamiseta())) {
+            jugadorDB.setCamiseta(jugador.getCamiseta());
+        }
+        
+        if (Objects.nonNull(jugador.getEstado())) {
+            jugadorDB.setEstado(jugador.getEstado());
         }
         
         return jugadorRepository.save(jugadorDB);

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.itr.app.entities.Jugador;
 import com.itr.app.services.JugadorService;
@@ -20,7 +19,6 @@ import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping(value="/api")
 public class JugadorController {
 	
 	@Autowired
@@ -28,25 +26,24 @@ public class JugadorController {
 	
 	// Guardar operacion
     @PostMapping("/jugadores")
-    public Jugador saveJugador(
+    public Jugador addJugador(
         @Valid @RequestBody Jugador jugador)
     {
   
-        return jugadorService.saveJugador(jugador);
+        return jugadorService.addJugador(jugador);
     }
   
     // Read operation
     @GetMapping("/jugadores")
-    public List<Jugador> fetchJugadorList()
+    public List<Jugador> getJugadorList()
     {
   
-        return jugadorService.fetchJugadorList();
+        return jugadorService.getJugadorList();
     }
   
     // Update operation
     @PutMapping("/jugadores/{id}")
-    public Jugador
-    updateJugador(@RequestBody Jugador jugador,
+    public Jugador updateJugador(@RequestBody Jugador jugador,
                      @PathVariable("id") int jugadorId)
     {
   

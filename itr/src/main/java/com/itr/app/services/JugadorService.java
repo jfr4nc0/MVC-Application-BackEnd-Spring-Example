@@ -6,10 +6,10 @@ import com.itr.app.entities.Jugador;
 
 public interface JugadorService {
     // guardar operacion
-    Jugador saveJugador(Jugador jugador);
+    Jugador addJugador(Jugador jugador);
   
     // leer operacion
-    List<Jugador> fetchJugadorList();
+    List<Jugador> getJugadorList();
   
     // actualizar operacion
     Jugador updateJugador(Jugador jugador, int jugadorId);
