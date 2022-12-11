@@ -4,6 +4,8 @@
 ### Email: jfcpersonal99@gmail.com
 
 Requerimientos: 
+  - Java 17
+  - Maven
   - MariaDB Server
   - Eclipse IDE
   - Eclipse plugins: Spring 4 Tools, Maven
