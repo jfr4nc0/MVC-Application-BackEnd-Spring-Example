@@ -1,6 +1,4 @@
 # Spring BackEnd
-### Autor: Joan Franco Canossa
-### Email: jfcpersonal99@gmail.com
 
 Requerimientos: 
   - Java 17
